@@ -9,5 +9,8 @@ while True:
         print ("Congratulations, that is the right number!")
         break
 
-    else:
-        print ("Nope, try again! :)")
+    elif guess > secret:
+        print ("Nope, try something smaller! :)")
+
+    elif guess < secret:
+        print ("Nope, try something bigger! :)")
