@@ -1,16 +1,23 @@
-secret = 7
+import random
 
-while True:
-    guess = raw_input("Which number do i have in mind? :) ")
 
-    guess = int(guess)
+def main():
+    secret = random.randint(1, 30)
 
-    if guess == secret:
-        print ("Congratulations, that is the right number!")
-        break
+    while True:
+        guess = raw_input("Which number do i have in mind? :) ")
 
-    elif guess > secret:
-        print ("Nope, try something smaller! :)")
+        guess = int(guess)
 
-    elif guess < secret:
-        print ("Nope, try something bigger! :)")
+        if guess == secret:
+            print ("Congratulations, that is the right number!")
+            break
+
+        elif guess > secret:
+            print ("Nope, try something smaller! :)")
+
+        elif guess < secret:
+            print ("Nope, try something bigger! :)")
+
+if __name__ == "__main__":  # this means that if somebody ran this Python file, execute only the code below
+    main()
